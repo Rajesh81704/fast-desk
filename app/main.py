@@ -1,7 +1,9 @@
+import os
 from typing import Optional, Dict, Any
 from fastapi import FastAPI, Query, Request, status, HTTPException
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import PlainTextResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from app.config import settings
@@ -39,6 +41,11 @@ Production-ready backend service integrating with Meta WhatsApp Cloud API.
     docs_url="/docs",
     redoc_url="/redoc",
 )
+
+# Mount public folder for static assets
+if os.path.exists("public"):
+    app.mount("/public", StaticFiles(directory="public"), name="public")
+
 
 
 # --------------------------------------------------

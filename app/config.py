@@ -5,7 +5,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    WHATSAPP_VERIFY_TOKEN: str = "fastdesk_webhook_secret"
+    WHATSAPP_VERIFY_TOKEN: str = "FASTDESK2026RAJESHSECRET2026"
     WHATSAPP_ACCESS_TOKEN: str = ""
     META_GRAPH_API_VERSION: str = "v21.0"
 

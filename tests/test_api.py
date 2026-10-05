@@ -9,8 +9,8 @@ client = TestClient(app)
 
 
 def test_health_check():
-    """GET / should return 200 and health status without exposing secrets."""
-    response = client.get("/")
+    """GET /api/health should return 200 and health status without exposing secrets."""
+    response = client.get("/api/health")
     assert response.status_code == 200
     data = response.json()
     assert data == {"status": "ok", "service": "FastDesk"}

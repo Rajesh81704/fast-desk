@@ -121,3 +121,16 @@ async def whatsapp_webhook(payload: Dict[str, Any]):
         "status": "received"
     }
 
+
+@app.api_route("/{path_name:path}", methods=["GET", "POST", "PUT", "DELETE"])
+async def catch_all(request: Request, path_name: str):
+    return {
+        "debug": "catch_all",
+        "path_name": path_name,
+        "url_path": request.url.path,
+        "scope_path": request.scope.get("path"),
+        "raw_path": request.scope.get("raw_path", b"").decode("utf-8"),
+        "headers": dict(request.headers),
+    }
+
+

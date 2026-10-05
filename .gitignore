@@ -4,7 +4,6 @@ __pycache__/
 .vercel/
 .DS_Store
 .env
-.next/
-node_modules/
+backend/__pycache__/
 frontend/.next/
 frontend/node_modules/

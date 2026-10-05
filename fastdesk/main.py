@@ -101,6 +101,15 @@ async def health():
     }
 
 
+@app.get("/api/debug")
+async def debug_endpoint(request: Request):
+    return {
+        "url_path": request.url.path,
+        "scope_path": request.scope.get("path"),
+        "headers": {k.decode("utf-8", "ignore") if isinstance(k, bytes) else str(k): v.decode("utf-8", "ignore") if isinstance(v, bytes) else str(v) for k, v in request.scope.get("headers", [])}
+    }
+
+
 # --------------------------------------------------
 # Meta Webhook Verification
 # --------------------------------------------------

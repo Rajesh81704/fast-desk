@@ -94,6 +94,13 @@ class WebhookStatusResponse(BaseModel):
     description="Returns the operational status of the FastDesk API service without exposing secrets.",
     response_model=HealthResponse,
 )
+@app.get(
+    "/api/health",
+    tags=["Health"],
+    summary="Health Check",
+    description="Returns the operational status of the FastDesk API service without exposing secrets.",
+    response_model=HealthResponse,
+)
 async def health():
     return {
         "status": "ok",

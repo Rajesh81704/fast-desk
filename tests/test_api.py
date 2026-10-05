@@ -1,9 +1,9 @@
 import pytest
 from unittest.mock import AsyncMock, MagicMock, patch
 from fastapi.testclient import TestClient
-from app.main import app
-from app.config import settings
-from app.services.whatsapp import send_whatsapp_message
+from fastdesk.main import app
+from fastdesk.config import settings
+from fastdesk.services.whatsapp import send_whatsapp_message
 
 client = TestClient(app)
 

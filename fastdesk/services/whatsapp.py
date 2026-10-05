@@ -1,7 +1,7 @@
 import logging
 from typing import Dict, Any, Optional
 import httpx
-from app.config import settings
+from fastdesk.config import settings
 
 logger = logging.getLogger("fastdesk.whatsapp")
 

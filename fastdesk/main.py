@@ -6,8 +6,8 @@ from fastapi.responses import PlainTextResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from app.config import settings
-from app.services.whatsapp_webhook import process_and_log_webhook_payload
+from fastdesk.config import settings
+from fastdesk.services.whatsapp_webhook import process_and_log_webhook_payload
 
 tags_metadata = [
     {

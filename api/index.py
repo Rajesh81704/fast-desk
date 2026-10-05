@@ -4,7 +4,7 @@ import os
 # Ensure root directory is in sys.path for Vercel Serverless Function imports
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from app.main import app as fastapi_app
+from fastdesk.main import app as fastapi_app
 
 
 class VercelPathMiddleware:

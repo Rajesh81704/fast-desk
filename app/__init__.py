@@ -1,0 +1,3 @@
+"""
+FastDesk Application Package
+"""

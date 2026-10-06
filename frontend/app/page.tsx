@@ -14,6 +14,7 @@ export default function Home() {
           <li><a href="#features">Features</a></li>
           <li><a href="#showcase">Product</a></li>
           <li><a href="#status">API Status</a></li>
+          <li><Link href="/privacy">Privacy Policy</Link></li>
           <li><a href="/docs" target="_blank" rel="noopener noreferrer">Swagger API Docs</a></li>
         </ul>
         <div>
@@ -163,9 +164,12 @@ export default function Home() {
           <img src="/assets/logo.png" alt="FastDesk Logo" style={{ height: "24px" }} />
           <span>© {new Date().getFullYear()} FastDesk Inc. All rights reserved.</span>
         </div>
-        <div className="status-badge">
-          <span className="status-dot"></span>
-          FastAPI Engine Online
+        <div style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
+          <Link href="/privacy" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Privacy Policy</Link>
+          <div className="status-badge">
+            <span className="status-dot"></span>
+            FastAPI Engine Online
+          </div>
         </div>
       </footer>
     </div>
